@@ -47,7 +47,7 @@ const fetchRecipe = async (query) => {
     recipeRow.innerHTML = "";
 
     if (!response || !response.meals) {
-      recipeRow.innerHTML = "<h2 class='recipe-title my-4'>No meals found. Please enter the keywords in English</h2>";
+      recipeRow.innerHTML = "<h2 class='recipe-title my-4'>No meals found. Please use the keywords English</h2>";
       return;
     }
 
@@ -132,4 +132,5 @@ searchBtn.addEventListener("click", async (e) => {
     }
     fetchRecipe(query);
   }
+
 });
