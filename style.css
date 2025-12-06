@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+:root {
+  --color-bg: #121212;
+  --color-secondary: #212121;
+  --color-white: #ffffff;
+  --color-second: #dddddd;
+  --color-black: #080808;
+  --color-black-supp: #08080894;
+  --color-primary: #08ba35;
+}
+#content {
+  display: none;
+}
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-primary);
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+.btn-theme {
+  right: 20px;
+  z-index: 4;
+  width: 45px;
+  bottom: 20px;
+  border: none;
+  display: flex;
+  height: 45px;
+  padding-bottom: 0px;
+  position: fixed;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+.btn-theme-dark {
+  display: none;
+}
+.header {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg);
+}
+body.bg-white .header {
+  background: var(--color-second);
+}
+.header .title {
+  font-size: 2em;
+  text-decoration: none;
+  font-family: cursive;
+  color: var(--color-primary);
+}
+.header .title span {
+  padding: 5px 0;
+  border-radius: 2px;
+  font-family: cursive;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+body.bg-white .header .title {
+  color: var(--color-black);
+}
+.header form {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  overflow: hidden;
+  max-width: 300px;
+  border-radius: 3px;
+  background: var(--color-white);
+}
+.header form input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+}
+.header form button {
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+.recipe-title {
+  text-align: center;
+  color: var(--color-white);
+}
+body.bg-white .recipe-title {
+  color: var(--color-black);
+}
+.img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+  text-align: center;
+  background: var(--color-secondary);
+}
+body.bg-white .img {
+  background: var(--color-second);
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  object-fit: cover;
+}
+.card-article {
+  overflow: hidden;
+  border-radius: 5px;
+  color: var(--color-white);
+  background: var(--color-black);
+}
+body.bg-white .card-article {
+  color: var(--color-black);
+  background: var(--color-second);
+}
+.openUp {
+  border: none;
+  font-size: 1.1em;
+  padding: 5px 20px;
+  border-radius: 2px;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+.box {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black-supp);
+}
+.recipe-details {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  max-width: 768px;
+  max-height: 500px;
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  background: var(--color-secondary);
+}
+body.bg-white .recipe-details {
+  color: var(--color-black);
+  background: var(--color-second);
+}
+.recipe-details::-webkit-scrollbar {
+  width: 8px;
+}
+.recipe-details::-webkit-scrollbar-thumb {
+  border-radius: 43x;
+  background: var(--color-primary);
+}
+.recipe-details h2 {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  text-decoration: dotted underline;
+}
+.ingredient-list {
+  margin-left: 5px;
+  flex-direction: column;
+  list-style-type: disc;
+}
+.recipe-close-btn {
+  top: 30px;
+  z-index: 4;
+  right: 30px;
+  border: none;
+  display: flex;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: absolute;
+  border-radius: 2px;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+@media screen and (max-width: 576px) {
+  .header {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
