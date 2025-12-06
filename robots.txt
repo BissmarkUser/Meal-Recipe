@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bissmarkuser.github.io/Meal-Recipe/sitemap.xml
